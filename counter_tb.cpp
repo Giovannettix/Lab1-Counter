@@ -32,7 +32,7 @@ int main(int argc, char **argv, char **env){
             //forces module to evaluate on both edges of clk
         }
         top->rst = (i<2) | (i == 22); //change rst and enable signals during simulation
-        top->en = ((i>4)&&(i<14)) | (i>18);
+        top->en = ((i>4)&&(i<14)) | (i>16);
         if(Verilated::gotFinish()) exit(0);
     }
     tfp->close();
